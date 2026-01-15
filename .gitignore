@@ -220,3 +220,9 @@ compile_commands.json
 
 # Ignore Bzlmod lock file until it is more stable
 MODULE.bazel.lock
+
+# Visual Studio files
+.vs/
+msvc.build/
+build.*/
+*.vcxproj.user

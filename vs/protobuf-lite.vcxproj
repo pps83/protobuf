@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{518b9757-fe57-4a04-9cec-47e235baf00c}</ProjectGuid>
+    <RootNamespace>protobuflite</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="Common.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <PublicIncludeDirectories>..\src;..\third_party\utf8_range;$(PublicIncludeDirectories)</PublicIncludeDirectories>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>..;..\src;..\third_party\utf8_range;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4018;4065;4146;4267;4305;4715;4996</DisableSpecificWarnings>
+      <AdditionalOptions Condition=" ('$(PlatformToolset)'=='ClangCL' Or ($(PlatformToolset.StartsWith('Intel')) And $(PlatformToolset.Contains('C++ Compiler'))))">-Wno-invalid-offsetof -Wno-unused-lambda-capture -Wno-deprecated-declarations %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="!('$(PlatformToolset)'=='ClangCL' Or ($(PlatformToolset.StartsWith('Intel')) And $(PlatformToolset.Contains('C++ Compiler'))))">/w44800 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>..;..\src;..\third_party\utf8_range;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4018;4065;4146;4267;4305;4715;4996</DisableSpecificWarnings>
+      <AdditionalOptions Condition=" ('$(PlatformToolset)'=='ClangCL' Or ($(PlatformToolset.StartsWith('Intel')) And $(PlatformToolset.Contains('C++ Compiler'))))">-Wno-invalid-offsetof -Wno-unused-lambda-capture -Wno-deprecated-declarations %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="!('$(PlatformToolset)'=='ClangCL' Or ($(PlatformToolset.StartsWith('Intel')) And $(PlatformToolset.Contains('C++ Compiler'))))">/w44800 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>..;..\src;..\third_party\utf8_range;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4018;4065;4146;4267;4305;4715;4996</DisableSpecificWarnings>
+      <AdditionalOptions Condition=" ('$(PlatformToolset)'=='ClangCL' Or ($(PlatformToolset.StartsWith('Intel')) And $(PlatformToolset.Contains('C++ Compiler'))))">-Wno-invalid-offsetof -Wno-unused-lambda-capture -Wno-deprecated-declarations %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="!('$(PlatformToolset)'=='ClangCL' Or ($(PlatformToolset.StartsWith('Intel')) And $(PlatformToolset.Contains('C++ Compiler'))))">/w44800 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>..;..\src;..\third_party\utf8_range;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4018;4065;4146;4267;4305;4715;4996</DisableSpecificWarnings>
+      <AdditionalOptions Condition=" ('$(PlatformToolset)'=='ClangCL' Or ($(PlatformToolset.StartsWith('Intel')) And $(PlatformToolset.Contains('C++ Compiler'))))">-Wno-invalid-offsetof -Wno-unused-lambda-capture -Wno-deprecated-declarations %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="!('$(PlatformToolset)'=='ClangCL' Or ($(PlatformToolset.StartsWith('Intel')) And $(PlatformToolset.Contains('C++ Compiler'))))">/w44800 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\google\protobuf\any.h" />
+    <ClInclude Include="..\src\google\protobuf\arena.h" />
+    <ClInclude Include="..\src\google\protobuf\arena_align.h" />
+    <ClInclude Include="..\src\google\protobuf\arena_allocation_policy.h" />
+    <ClInclude Include="..\src\google\protobuf\arena_cleanup.h" />
+    <ClInclude Include="..\src\google\protobuf\arenastring.h" />
+    <ClInclude Include="..\src\google\protobuf\arenaz_sampler.h" />
+    <ClInclude Include="..\src\google\protobuf\descriptor_lite.h" />
+    <ClInclude Include="..\src\google\protobuf\endian.h" />
+    <ClInclude Include="..\src\google\protobuf\explicitly_constructed.h" />
+    <ClInclude Include="..\src\google\protobuf\extension_set.h" />
+    <ClInclude Include="..\src\google\protobuf\extension_set_inl.h" />
+    <ClInclude Include="..\src\google\protobuf\generated_enum_util.h" />
+    <ClInclude Include="..\src\google\protobuf\generated_message_tctable_decl.h" />
+    <ClInclude Include="..\src\google\protobuf\generated_message_tctable_impl.h" />
+    <ClInclude Include="..\src\google\protobuf\generated_message_util.h" />
+    <ClInclude Include="..\src\google\protobuf\has_bits.h" />
+    <ClInclude Include="..\src\google\protobuf\implicit_weak_message.h" />
+    <ClInclude Include="..\src\google\protobuf\inlined_string_field.h" />
+    <ClInclude Include="..\src\google\protobuf\internal_visibility.h" />
+    <ClInclude Include="..\src\google\protobuf\io\coded_stream.h" />
+    <ClInclude Include="..\src\google\protobuf\io\io_win32.h" />
+    <ClInclude Include="..\src\google\protobuf\io\zero_copy_stream.h" />
+    <ClInclude Include="..\src\google\protobuf\io\zero_copy_stream_impl.h" />
+    <ClInclude Include="..\src\google\protobuf\io\zero_copy_stream_impl_lite.h" />
+    <ClInclude Include="..\src\google\protobuf\map.h" />
+    <ClInclude Include="..\src\google\protobuf\map_field_lite.h" />
+    <ClInclude Include="..\src\google\protobuf\map_type_handler.h" />
+    <ClInclude Include="..\src\google\protobuf\message_lite.h" />
+    <ClInclude Include="..\src\google\protobuf\metadata_lite.h" />
+    <ClInclude Include="..\src\google\protobuf\micro_string.h" />
+    <ClInclude Include="..\src\google\protobuf\parse_context.h" />
+    <ClInclude Include="..\src\google\protobuf\port.h" />
+    <ClInclude Include="..\src\google\protobuf\raw_ptr.h" />
+    <ClInclude Include="..\src\google\protobuf\repeated_field.h" />
+    <ClInclude Include="..\src\google\protobuf\repeated_ptr_field.h" />
+    <ClInclude Include="..\src\google\protobuf\runtime_version.h" />
+    <ClInclude Include="..\src\google\protobuf\serial_arena.h" />
+    <ClInclude Include="..\src\google\protobuf\string_block.h" />
+    <ClInclude Include="..\src\google\protobuf\stubs\callback.h" />
+    <ClInclude Include="..\src\google\protobuf\stubs\common.h" />
+    <ClInclude Include="..\src\google\protobuf\stubs\platform_macros.h" />
+    <ClInclude Include="..\src\google\protobuf\stubs\port.h" />
+    <ClInclude Include="..\src\google\protobuf\stubs\status_macros.h" />
+    <ClInclude Include="..\src\google\protobuf\thread_safe_arena.h" />
+    <ClInclude Include="..\src\google\protobuf\varint_shuffle.h" />
+    <ClInclude Include="..\src\google\protobuf\wire_format_lite.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\google\protobuf\any_lite.cc" />
+    <ClCompile Include="..\src\google\protobuf\arena.cc" />
+    <ClCompile Include="..\src\google\protobuf\arena_align.cc" />
+    <ClCompile Include="..\src\google\protobuf\arenastring.cc" />
+    <ClCompile Include="..\src\google\protobuf\arenaz_sampler.cc" />
+    <ClCompile Include="..\src\google\protobuf\extension_set.cc" />
+    <ClCompile Include="..\src\google\protobuf\generated_enum_util.cc" />
+    <ClCompile Include="..\src\google\protobuf\generated_message_tctable_lite.cc" />
+    <ClCompile Include="..\src\google\protobuf\generated_message_util.cc" />
+    <ClCompile Include="..\src\google\protobuf\implicit_weak_message.cc" />
+    <ClCompile Include="..\src\google\protobuf\inlined_string_field.cc" />
+    <ClCompile Include="..\src\google\protobuf\io\coded_stream.cc" />
+    <ClCompile Include="..\src\google\protobuf\io\io_win32.cc" />
+    <ClCompile Include="..\src\google\protobuf\io\zero_copy_stream.cc" />
+    <ClCompile Include="..\src\google\protobuf\io\zero_copy_stream_impl.cc" />
+    <ClCompile Include="..\src\google\protobuf\io\zero_copy_stream_impl_lite.cc" />
+    <ClCompile Include="..\src\google\protobuf\map.cc" />
+    <ClCompile Include="..\src\google\protobuf\message_lite.cc" />
+    <ClCompile Include="..\src\google\protobuf\micro_string.cc" />
+    <ClCompile Include="..\src\google\protobuf\parse_context.cc" />
+    <ClCompile Include="..\src\google\protobuf\port.cc" />
+    <ClCompile Include="..\src\google\protobuf\raw_ptr.cc" />
+    <ClCompile Include="..\src\google\protobuf\repeated_field.cc" />
+    <ClCompile Include="..\src\google\protobuf\repeated_ptr_field.cc" />
+    <ClCompile Include="..\src\google\protobuf\stubs\common.cc" />
+    <ClCompile Include="..\src\google\protobuf\wire_format_lite.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\abseil-cpp\vs\absl.vcxproj">
+      <Project>{6713f5e3-9f12-484b-a14b-fd7eaf87267a}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
