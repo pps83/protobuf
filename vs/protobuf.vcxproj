@@ -233,9 +233,7 @@
     <ClCompile Include="..\src\google\protobuf\arenastring.cc" />
     <ClCompile Include="..\src\google\protobuf\arenaz_sampler.cc" />
     <ClCompile Include="..\src\google\protobuf\compiler\importer.cc" />
-    <ClCompile Include="..\src\google\protobuf\compiler\parser.cc">
-      <ObjectFileName>$(IntDir)/src/google/protobuf/compiler/parser.cc.obj</ObjectFileName>
-    </ClCompile>
+    <ClCompile Include="..\src\google\protobuf\compiler\parser.cc" />
     <ClCompile Include="..\src\google\protobuf\cpp_features.pb.cc" />
     <ClCompile Include="..\src\google\protobuf\descriptor.cc" />
     <ClCompile Include="..\src\google\protobuf\descriptor.pb.cc" />
@@ -269,9 +267,7 @@
     <ClCompile Include="..\src\google\protobuf\io\zero_copy_stream_impl_lite.cc" />
     <ClCompile Include="..\src\google\protobuf\json\internal\lexer.cc" />
     <ClCompile Include="..\src\google\protobuf\json\internal\message_path.cc" />
-    <ClCompile Include="..\src\google\protobuf\json\internal\parser.cc">
-      <ObjectFileName>$(IntDir)/src/google/protobuf/json/internal/parser.cc.obj</ObjectFileName>
-    </ClCompile>
+    <ClCompile Include="..\src\google\protobuf\json\internal\parser-internal.cc" />
     <ClCompile Include="..\src\google\protobuf\json\internal\unparser.cc" />
     <ClCompile Include="..\src\google\protobuf\json\internal\untyped_message.cc" />
     <ClCompile Include="..\src\google\protobuf\json\internal\writer.cc" />
