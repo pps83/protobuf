@@ -525,7 +525,7 @@ static_assert(PROTOBUF_ABSL_MIN(20230125, 3),
 #ifdef PROTOBUF_PRAGMA_INIT_SEG
 #error PROTOBUF_PRAGMA_INIT_SEG was previously defined
 #endif
-#ifdef _MSC_VER
+#if defined(_MSC_VER) && !defined(PROTOBUF_PRAGMA_INIT_SEG_USED)
 #define PROTOBUF_PRAGMA_INIT_SEG __pragma(init_seg(lib))
 #else
 #define PROTOBUF_PRAGMA_INIT_SEG
