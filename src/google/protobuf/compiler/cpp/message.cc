@@ -5729,9 +5729,13 @@ void MessageGenerator::GenerateSourceDefaultInstance(io::Printer* p) {
           {"implicit_weak_descriptor_tail",
            [&] {
              if (!use_implicit_weak_descriptor) return;
-             p->Emit({{"index", index_in_file_messages_}}, R"cc(
+             p->Emit({{"index", index_in_file_messages_},
+                      {"file_message_globals",
+                       UniqueName("file_message_globals", descriptor_->file(),
+                                  options_)}},
+                     R"cc(
                ::_pbi::WeakDescriptorDefaultTail tail = {
-                   file_message_globals + $index$, sizeof($globals_type$)};
+                   $file_message_globals$ + $index$, sizeof($globals_type$)};
              )cc");
            }},
           Sub({"SECTION",
