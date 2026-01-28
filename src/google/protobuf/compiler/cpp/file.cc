@@ -73,6 +73,7 @@ absl::flat_hash_map<absl::string_view, std::string> FileVars(
        UniqueName("file_level_service_descriptors", file, options)},
       {"static_init", UniqueName("static_init", file, options)},
       {"var_schemas", UniqueName("schemas", file, options)},
+      {"file_message_globals", UniqueName("file_message_globals", file, options)},
   };
 }
 
@@ -840,7 +841,7 @@ void FileGenerator::GenerateSource(io::Printer* p) {
         },
         R"cc(
           $weak_defaults$;
-          static const ::_pbi::MessageGlobalsBase* file_message_globals[] = {
+          static const ::_pbi::MessageGlobalsBase* $file_message_globals$[] = {
               $globals$,
           };
         )cc");
@@ -1113,7 +1114,7 @@ void FileGenerator::GenerateReflectionInitializationCode(io::Printer* p) {
         )cc");
     constexpr absl::string_view file_default_instances_code = R"cc(
       static const ::_pbi::MessageGlobalsBase* $nonnull$ const
-          file_message_globals[] = {
+          $file_message_globals$[] = {
               $globals$,
       };
     )cc";
@@ -1141,7 +1142,7 @@ void FileGenerator::GenerateReflectionInitializationCode(io::Printer* p) {
       const ::uint32_t $tablename$::offsets[1] = {};
       static constexpr ::_pbi::MigrationSchema* $nullable$ $var_schemas$ = nullptr;
       static constexpr ::_pbi::MessageGlobalsBase* $nonnull$ const* $nullable$
-          file_message_globals = nullptr;
+          $file_message_globals$ = nullptr;
     )cc");
   }
 
@@ -1269,7 +1270,7 @@ void FileGenerator::GenerateReflectionInitializationCode(io::Printer* p) {
             $num_deps$,
             $num_msgs$,
             $var_schemas$,
-            file_message_globals,
+            $file_message_globals$,
             $tablename$::offsets,
             $file_level_enum_descriptors$,
             $file_level_service_descriptors$,
