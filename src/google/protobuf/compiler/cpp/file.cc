@@ -551,6 +551,7 @@ void FileGenerator::GenerateSourcePrelude(io::Printer* p) {
   // required by the standard.
   p->Emit(R"cc(
     PROTOBUF_PRAGMA_INIT_SEG
+    #define PROTOBUF_PRAGMA_INIT_SEG_USED
     namespace _pb = $pb$;
     namespace _pbi = $pbi$;
     namespace _fl = $pbi$::field_layout;
