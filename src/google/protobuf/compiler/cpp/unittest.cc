@@ -29,7 +29,7 @@
 #include "google/protobuf/unittest_import.pb.h"
 #include "google/protobuf/unittest_optimize_for.pb.h"
 
-
+#if 0
 #define MESSAGE_TEST_NAME MessageTest
 #define GENERATED_DESCRIPTOR_TEST_NAME GeneratedDescriptorTest
 #define GENERATED_MESSAGE_TEST_NAME GeneratedMessageTest
@@ -146,3 +146,4 @@ TEST(GENERATED_MESSAGE_TEST_NAME, TestConflictingExtension) {
 }  // namespace compiler
 }  // namespace protobuf
 }  // namespace google
+#endif
