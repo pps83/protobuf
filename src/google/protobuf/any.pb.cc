@@ -79,10 +79,10 @@ const ::uint32_t
 };
 
 static const ::_pbi::MigrationSchema
-    schemas[] ABSL_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+    schemas_google_2fprotobuf_2fany_2eproto[] ABSL_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
         {0, sizeof(::google::protobuf::Any)},
 };
-static const ::_pb::Message* PROTOBUF_NONNULL const file_default_instances[] = {
+static const ::_pb::Message* PROTOBUF_NONNULL const file_default_instances_google_2fprotobuf_2fany_2eproto[] = {
     &::google::protobuf::_Any_default_instance_._instance,
 };
 const char descriptor_table_protodef_google_2fprotobuf_2fany_2eproto[] ABSL_ATTRIBUTE_SECTION_VARIABLE(
@@ -105,8 +105,8 @@ PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_google_2fproto
     nullptr,
     0,
     1,
-    schemas,
-    file_default_instances,
+    schemas_google_2fprotobuf_2fany_2eproto,
+    file_default_instances_google_2fprotobuf_2fany_2eproto,
     TableStruct_google_2fprotobuf_2fany_2eproto::offsets,
     file_level_enum_descriptors_google_2fprotobuf_2fany_2eproto,
     file_level_service_descriptors_google_2fprotobuf_2fany_2eproto,
@@ -453,7 +453,7 @@ namespace protobuf {
 #pragma clang diagnostic pop
 #endif  // __llvm__
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::std::false_type
-    _static_init2_ [[maybe_unused]] =
+    _static_init_google_2fprotobuf_2fany_2eproto_2_ [[maybe_unused]] =
         (::_pbi::AddDescriptors(&descriptor_table_google_2fprotobuf_2fany_2eproto),
          ::std::false_type{});
 #include "google/protobuf/port_undef.inc"
