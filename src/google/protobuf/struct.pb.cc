@@ -21,6 +21,7 @@
 // Must be included last.
 #include "google/protobuf/port_def.inc"
 PROTOBUF_PRAGMA_INIT_SEG
+#define PROTOBUF_PRAGMA_INIT_SEG_USED
 namespace _pb = ::google::protobuf;
 namespace _pbi = ::google::protobuf::internal;
 namespace _fl = ::google::protobuf::internal::field_layout;
@@ -158,13 +159,13 @@ const ::uint32_t
 };
 
 static const ::_pbi::MigrationSchema
-    schemas[] ABSL_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+    schemas_google_2fprotobuf_2fstruct_2eproto[] ABSL_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
         {0, sizeof(::google::protobuf::Struct_FieldsEntry_DoNotUse)},
         {7, sizeof(::google::protobuf::Struct)},
         {12, sizeof(::google::protobuf::Value)},
         {21, sizeof(::google::protobuf::ListValue)},
 };
-static const ::_pb::Message* PROTOBUF_NONNULL const file_default_instances[] = {
+static const ::_pb::Message* PROTOBUF_NONNULL const file_default_instances_google_2fprotobuf_2fstruct_2eproto[] = {
     &::google::protobuf::_Struct_FieldsEntry_DoNotUse_default_instance_._instance,
     &::google::protobuf::_Struct_default_instance_._instance,
     &::google::protobuf::_Value_default_instance_._instance,
@@ -200,8 +201,8 @@ PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_google_2fproto
     nullptr,
     0,
     4,
-    schemas,
-    file_default_instances,
+    schemas_google_2fprotobuf_2fstruct_2eproto,
+    file_default_instances_google_2fprotobuf_2fstruct_2eproto,
     TableStruct_google_2fprotobuf_2fstruct_2eproto::offsets,
     file_level_enum_descriptors_google_2fprotobuf_2fstruct_2eproto,
     file_level_service_descriptors_google_2fprotobuf_2fstruct_2eproto,
@@ -1380,7 +1381,7 @@ namespace protobuf {
 }  // namespace google
 // @@protoc_insertion_point(global_scope)
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::std::false_type
-    _static_init2_ [[maybe_unused]] =
+    _static_init_google_2fprotobuf_2fstruct_2eproto_2_ [[maybe_unused]] =
         (::_pbi::AddDescriptors(&descriptor_table_google_2fprotobuf_2fstruct_2eproto),
          ::std::false_type{});
 #include "google/protobuf/port_undef.inc"
