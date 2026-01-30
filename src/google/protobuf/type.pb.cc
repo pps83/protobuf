@@ -20,7 +20,6 @@
 
 // Must be included last.
 #include "google/protobuf/port_def.inc"
-PROTOBUF_PRAGMA_INIT_SEG
 #ifndef PROTOBUF_PRAGMA_INIT_SEG_USED
 #define PROTOBUF_PRAGMA_INIT_SEG_USED
 PROTOBUF_PRAGMA_INIT_SEG
