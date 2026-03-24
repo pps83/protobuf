@@ -1,0 +1,9 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="../../abseil-cpp/vs/absl.vcxproj" Id="6713f5e3-9f12-484b-a14b-fd7eaf87267a" />
+  <Project Path="protobuf-lite.vcxproj" Id="518b9757-fe57-4a04-9cec-47e235baf00c" />
+  <Project Path="protobuf.vcxproj" Id="56fa89ef-111c-40f8-8702-76ca44b105e5" />
+</Solution>
