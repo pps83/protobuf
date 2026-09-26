@@ -502,8 +502,8 @@
 #ifdef PROTOBUF_ATTRIBUTE_WEAK
 #error PROTOBUF_ATTRIBUTE_WEAK was previously defined
 #endif
-#if ABSL_HAVE_ATTRIBUTE(weak) && !defined(__APPLE__) && \
-    (!defined(_WIN32) || __clang_major__ < 9) && !defined(__MINGW32__)
+#if ABSL_HAVE_ATTRIBUTE(weak) && !defined(__APPLE__) && !defined(__CYGWIN__) \
+    && (!defined(_WIN32) || __clang_major__ < 9) && !defined(__MINGW32__)
 #define PROTOBUF_ATTRIBUTE_WEAK __attribute__((weak))
 #define PROTOBUF_HAVE_ATTRIBUTE_WEAK 1
 #else
