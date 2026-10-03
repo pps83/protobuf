@@ -21,14 +21,17 @@
 
 // Must be included last.
 #include "google/protobuf/port_def.inc"
+#ifndef PROTOBUF_PRAGMA_INIT_SEG_USED
+#define PROTOBUF_PRAGMA_INIT_SEG_USED
 PROTOBUF_PRAGMA_INIT_SEG
+#endif
 namespace _pb = ::google::protobuf;
 namespace _pbi = ::google::protobuf::internal;
 namespace _fl = ::google::protobuf::internal::field_layout;
 #ifdef PROTOBUF_MESSAGE_GLOBALS
 namespace {
 PROTOBUF_CONSTINIT ::google::protobuf::internal::ReflectionData
-    file_reflection_data[] = {
+    file_reflection_data_google_2fprotobuf_2fapi_2eproto[] = {
         // ::google::protobuf::Api
         {&::_pbi::kDescriptorMethods, &::descriptor_table_google_2fprotobuf_2fapi_2eproto, /* tracker*/ nullptr,},
         // ::google::protobuf::Method
@@ -144,7 +147,7 @@ constexpr auto Mixin::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[2],
+      &file_reflection_data_google_2fprotobuf_2fapi_2eproto[2],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_google_2fprotobuf_2fapi_2eproto,
@@ -154,12 +157,10 @@ constexpr auto Mixin::InternalGenerateClassData_(
 }
 struct MixinGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
   constexpr MixinGlobalsTypeInternal()
-      :
 #ifndef PROTOBUF_MESSAGE_GLOBALS
-        _default(::_pbi::ConstantInitialized{},
-                 Mixin_class_data_.base())
+      : _default(::_pbi::ConstantInitialized{}, Mixin_class_data_.base())
 #else   // !PROTOBUF_MESSAGE_GLOBALS
-        MessageGlobalsBase(Mixin::InternalGenerateClassData_(
+      : MessageGlobalsBase(Mixin::InternalGenerateClassData_(
             _default, &Mixin_globals_._table.header)),
         _default(::_pbi::ConstantInitialized{}, GetClassData()),
         _table(::_pbi::PrivateAccess::GenerateParseTable<Mixin>(
@@ -357,7 +358,7 @@ constexpr auto Method::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[1],
+      &file_reflection_data_google_2fprotobuf_2fapi_2eproto[1],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_google_2fprotobuf_2fapi_2eproto,
@@ -367,12 +368,10 @@ constexpr auto Method::InternalGenerateClassData_(
 }
 struct MethodGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
   constexpr MethodGlobalsTypeInternal()
-      :
 #ifndef PROTOBUF_MESSAGE_GLOBALS
-        _default(::_pbi::ConstantInitialized{},
-                 Method_class_data_.base())
+      : _default(::_pbi::ConstantInitialized{}, Method_class_data_.base())
 #else   // !PROTOBUF_MESSAGE_GLOBALS
-        MessageGlobalsBase(Method::InternalGenerateClassData_(
+      : MessageGlobalsBase(Method::InternalGenerateClassData_(
             _default, &Method_globals_._table.header)),
         _default(::_pbi::ConstantInitialized{}, GetClassData()),
         _table(::_pbi::PrivateAccess::GenerateParseTable<Method>(
@@ -590,7 +589,7 @@ constexpr auto Api::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[0],
+      &file_reflection_data_google_2fprotobuf_2fapi_2eproto[0],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_google_2fprotobuf_2fapi_2eproto,
@@ -600,12 +599,10 @@ constexpr auto Api::InternalGenerateClassData_(
 }
 struct ApiGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
   constexpr ApiGlobalsTypeInternal()
-      :
 #ifndef PROTOBUF_MESSAGE_GLOBALS
-        _default(::_pbi::ConstantInitialized{},
-                 Api_class_data_.base())
+      : _default(::_pbi::ConstantInitialized{}, Api_class_data_.base())
 #else   // !PROTOBUF_MESSAGE_GLOBALS
-        MessageGlobalsBase(Api::InternalGenerateClassData_(
+      : MessageGlobalsBase(Api::InternalGenerateClassData_(
             _default, &Api_globals_._table.header)),
         _default(::_pbi::ConstantInitialized{}, GetClassData()),
         _table(::_pbi::PrivateAccess::GenerateParseTable<Api>(
@@ -698,13 +695,13 @@ const ::uint32_t
 };
 
 static const ::_pbi::MigrationSchema
-    schemas[] ABSL_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+    schemas_google_2fprotobuf_2fapi_2eproto[] ABSL_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
         {0, sizeof(::google::protobuf::Api)},
         {19, sizeof(::google::protobuf::Method)},
         {38, sizeof(::google::protobuf::Mixin)},
 };
 static const ::_pbi::MessageGlobalsBase* PROTOBUF_NONNULL const
-    file_message_globals[] = {
+    file_message_globals_google_2fprotobuf_2fapi_2eproto[] = {
         &::google::protobuf::Api_globals_,
         &::google::protobuf::Method_globals_,
         &::google::protobuf::Mixin_globals_,
@@ -748,8 +745,8 @@ PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_google_2fproto
     descriptor_table_google_2fprotobuf_2fapi_2eproto_deps,
     2,
     3,
-    schemas,
-    file_message_globals,
+    schemas_google_2fprotobuf_2fapi_2eproto,
+    file_message_globals_google_2fprotobuf_2fapi_2eproto,
     TableStruct_google_2fprotobuf_2fapi_2eproto::offsets,
     file_level_enum_descriptors_google_2fprotobuf_2fapi_2eproto,
     file_level_service_descriptors_google_2fprotobuf_2fapi_2eproto,
@@ -1933,7 +1930,7 @@ namespace protobuf {
 }  // namespace google
 // @@protoc_insertion_point(global_scope)
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::std::false_type
-    _static_init2_ [[maybe_unused]] =
+    _static_init_google_2fprotobuf_2fapi_2eproto_2_ [[maybe_unused]] =
         (::_pbi::AddDescriptors(&descriptor_table_google_2fprotobuf_2fapi_2eproto),
          ::std::false_type{});
 #include "google/protobuf/port_undef.inc"
