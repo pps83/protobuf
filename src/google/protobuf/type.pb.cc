@@ -21,14 +21,17 @@
 
 // Must be included last.
 #include "google/protobuf/port_def.inc"
+#ifndef PROTOBUF_PRAGMA_INIT_SEG_USED
+#define PROTOBUF_PRAGMA_INIT_SEG_USED
 PROTOBUF_PRAGMA_INIT_SEG
+#endif
 namespace _pb = ::google::protobuf;
 namespace _pbi = ::google::protobuf::internal;
 namespace _fl = ::google::protobuf::internal::field_layout;
 #ifdef PROTOBUF_MESSAGE_GLOBALS
 namespace {
 PROTOBUF_CONSTINIT ::google::protobuf::internal::ReflectionData
-    file_reflection_data[] = {
+    file_reflection_data_google_2fprotobuf_2ftype_2eproto[] = {
         // ::google::protobuf::Type
         {&::_pbi::kDescriptorMethods, &::descriptor_table_google_2fprotobuf_2ftype_2eproto, /* tracker*/ nullptr,},
         // ::google::protobuf::Field
@@ -151,7 +154,7 @@ constexpr auto Option::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[4],
+      &file_reflection_data_google_2fprotobuf_2ftype_2eproto[4],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_google_2fprotobuf_2ftype_2eproto,
@@ -161,12 +164,10 @@ constexpr auto Option::InternalGenerateClassData_(
 }
 struct OptionGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
   constexpr OptionGlobalsTypeInternal()
-      :
 #ifndef PROTOBUF_MESSAGE_GLOBALS
-        _default(::_pbi::ConstantInitialized{},
-                 Option_class_data_.base())
+      : _default(::_pbi::ConstantInitialized{}, Option_class_data_.base())
 #else   // !PROTOBUF_MESSAGE_GLOBALS
-        MessageGlobalsBase(Option::InternalGenerateClassData_(
+      : MessageGlobalsBase(Option::InternalGenerateClassData_(
             _default, &Option_globals_._table.header)),
         _default(::_pbi::ConstantInitialized{}, GetClassData()),
         _table(::_pbi::PrivateAccess::GenerateParseTable<Option>(
@@ -384,7 +385,7 @@ constexpr auto Field::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[1],
+      &file_reflection_data_google_2fprotobuf_2ftype_2eproto[1],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_google_2fprotobuf_2ftype_2eproto,
@@ -394,12 +395,10 @@ constexpr auto Field::InternalGenerateClassData_(
 }
 struct FieldGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
   constexpr FieldGlobalsTypeInternal()
-      :
 #ifndef PROTOBUF_MESSAGE_GLOBALS
-        _default(::_pbi::ConstantInitialized{},
-                 Field_class_data_.base())
+      : _default(::_pbi::ConstantInitialized{}, Field_class_data_.base())
 #else   // !PROTOBUF_MESSAGE_GLOBALS
-        MessageGlobalsBase(Field::InternalGenerateClassData_(
+      : MessageGlobalsBase(Field::InternalGenerateClassData_(
             _default, &Field_globals_._table.header)),
         _default(::_pbi::ConstantInitialized{}, GetClassData()),
         _table(::_pbi::PrivateAccess::GenerateParseTable<Field>(
@@ -554,7 +553,7 @@ constexpr auto EnumValue::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[3],
+      &file_reflection_data_google_2fprotobuf_2ftype_2eproto[3],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_google_2fprotobuf_2ftype_2eproto,
@@ -564,12 +563,10 @@ constexpr auto EnumValue::InternalGenerateClassData_(
 }
 struct EnumValueGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
   constexpr EnumValueGlobalsTypeInternal()
-      :
 #ifndef PROTOBUF_MESSAGE_GLOBALS
-        _default(::_pbi::ConstantInitialized{},
-                 EnumValue_class_data_.base())
+      : _default(::_pbi::ConstantInitialized{}, EnumValue_class_data_.base())
 #else   // !PROTOBUF_MESSAGE_GLOBALS
-        MessageGlobalsBase(EnumValue::InternalGenerateClassData_(
+      : MessageGlobalsBase(EnumValue::InternalGenerateClassData_(
             _default, &EnumValue_globals_._table.header)),
         _default(::_pbi::ConstantInitialized{}, GetClassData()),
         _table(::_pbi::PrivateAccess::GenerateParseTable<EnumValue>(
@@ -774,7 +771,7 @@ constexpr auto Type::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[0],
+      &file_reflection_data_google_2fprotobuf_2ftype_2eproto[0],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_google_2fprotobuf_2ftype_2eproto,
@@ -784,12 +781,10 @@ constexpr auto Type::InternalGenerateClassData_(
 }
 struct TypeGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
   constexpr TypeGlobalsTypeInternal()
-      :
 #ifndef PROTOBUF_MESSAGE_GLOBALS
-        _default(::_pbi::ConstantInitialized{},
-                 Type_class_data_.base())
+      : _default(::_pbi::ConstantInitialized{}, Type_class_data_.base())
 #else   // !PROTOBUF_MESSAGE_GLOBALS
-        MessageGlobalsBase(Type::InternalGenerateClassData_(
+      : MessageGlobalsBase(Type::InternalGenerateClassData_(
             _default, &Type_globals_._table.header)),
         _default(::_pbi::ConstantInitialized{}, GetClassData()),
         _table(::_pbi::PrivateAccess::GenerateParseTable<Type>(
@@ -983,7 +978,7 @@ constexpr auto Enum::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[2],
+      &file_reflection_data_google_2fprotobuf_2ftype_2eproto[2],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_google_2fprotobuf_2ftype_2eproto,
@@ -993,12 +988,10 @@ constexpr auto Enum::InternalGenerateClassData_(
 }
 struct EnumGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
   constexpr EnumGlobalsTypeInternal()
-      :
 #ifndef PROTOBUF_MESSAGE_GLOBALS
-        _default(::_pbi::ConstantInitialized{},
-                 Enum_class_data_.base())
+      : _default(::_pbi::ConstantInitialized{}, Enum_class_data_.base())
 #else   // !PROTOBUF_MESSAGE_GLOBALS
-        MessageGlobalsBase(Enum::InternalGenerateClassData_(
+      : MessageGlobalsBase(Enum::InternalGenerateClassData_(
             _default, &Enum_globals_._table.header)),
         _default(::_pbi::ConstantInitialized{}, GetClassData()),
         _table(::_pbi::PrivateAccess::GenerateParseTable<Enum>(
@@ -1117,7 +1110,7 @@ const ::uint32_t
 };
 
 static const ::_pbi::MigrationSchema
-    schemas[] ABSL_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+    schemas_google_2fprotobuf_2ftype_2eproto[] ABSL_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
         {0, sizeof(::google::protobuf::Type)},
         {17, sizeof(::google::protobuf::Field)},
         {40, sizeof(::google::protobuf::Enum)},
@@ -1125,7 +1118,7 @@ static const ::_pbi::MigrationSchema
         {64, sizeof(::google::protobuf::Option)},
 };
 static const ::_pbi::MessageGlobalsBase* PROTOBUF_NONNULL const
-    file_message_globals[] = {
+    file_message_globals_google_2fprotobuf_2ftype_2eproto[] = {
         &::google::protobuf::Type_globals_,
         &::google::protobuf::Field_globals_,
         &::google::protobuf::Enum_globals_,
@@ -1193,8 +1186,8 @@ PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_google_2fproto
     descriptor_table_google_2fprotobuf_2ftype_2eproto_deps,
     2,
     5,
-    schemas,
-    file_message_globals,
+    schemas_google_2fprotobuf_2ftype_2eproto,
+    file_message_globals_google_2fprotobuf_2ftype_2eproto,
     TableStruct_google_2fprotobuf_2ftype_2eproto::offsets,
     file_level_enum_descriptors_google_2fprotobuf_2ftype_2eproto,
     file_level_service_descriptors_google_2fprotobuf_2ftype_2eproto,
@@ -3091,7 +3084,7 @@ namespace protobuf {
 }  // namespace google
 // @@protoc_insertion_point(global_scope)
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::std::false_type
-    _static_init2_ [[maybe_unused]] =
+    _static_init_google_2fprotobuf_2ftype_2eproto_2_ [[maybe_unused]] =
         (::_pbi::AddDescriptors(&descriptor_table_google_2fprotobuf_2ftype_2eproto),
          ::std::false_type{});
 #include "google/protobuf/port_undef.inc"
