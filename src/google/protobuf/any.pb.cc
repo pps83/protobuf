@@ -21,7 +21,10 @@
 
 // Must be included last.
 #include "google/protobuf/port_def.inc"
+#ifndef PROTOBUF_PRAGMA_INIT_SEG_USED
+#define PROTOBUF_PRAGMA_INIT_SEG_USED
 PROTOBUF_PRAGMA_INIT_SEG
+#endif
 namespace _pb = ::google::protobuf;
 namespace _pbi = ::google::protobuf::internal;
 namespace _fl = ::google::protobuf::internal::field_layout;
@@ -213,11 +216,11 @@ const ::uint32_t
 };
 
 static const ::_pbi::MigrationSchema
-    schemas[] ABSL_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+    schemas_google_2fprotobuf_2fany_2eproto[] ABSL_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
         {0, sizeof(::google::protobuf::Any)},
 };
 static const ::_pbi::MessageGlobalsBase* PROTOBUF_NONNULL const
-    file_message_globals[] = {
+    file_message_globals_google_2fprotobuf_2fany_2eproto[] = {
         &::google::protobuf::Any_globals_,
 };
 const char descriptor_table_protodef_google_2fprotobuf_2fany_2eproto[] ABSL_ATTRIBUTE_SECTION_VARIABLE(
@@ -240,8 +243,8 @@ PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_google_2fproto
     nullptr,
     0,
     1,
-    schemas,
-    file_message_globals,
+    schemas_google_2fprotobuf_2fany_2eproto,
+    file_message_globals_google_2fprotobuf_2fany_2eproto,
     TableStruct_google_2fprotobuf_2fany_2eproto::offsets,
     file_level_enum_descriptors_google_2fprotobuf_2fany_2eproto,
     file_level_service_descriptors_google_2fprotobuf_2fany_2eproto,
@@ -516,7 +519,7 @@ namespace protobuf {
 #pragma clang diagnostic pop
 #endif  // __llvm__
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::std::false_type
-    _static_init2_ [[maybe_unused]] =
+    _static_init_google_2fprotobuf_2fany_2eproto_2_ [[maybe_unused]] =
         (::_pbi::AddDescriptors(&descriptor_table_google_2fprotobuf_2fany_2eproto),
          ::std::false_type{});
 #include "google/protobuf/port_undef.inc"
