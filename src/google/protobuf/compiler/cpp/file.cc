@@ -74,6 +74,7 @@ absl::flat_hash_map<absl::string_view, std::string> FileVars(
       {"static_init", UniqueName("static_init", file, options)},
       {"var_schemas", UniqueName("schemas", file, options)},
       {"file_message_globals", UniqueName("file_message_globals", file, options)},
+      {"file_reflection_data", UniqueName("file_reflection_data", file, options)},
   };
 }
 
@@ -795,7 +796,7 @@ void FileGenerator::GenerateSource(io::Printer* p) {
 #ifdef PROTOBUF_MESSAGE_GLOBALS
           namespace {
           PROTOBUF_CONSTINIT ::google::protobuf::internal::ReflectionData
-              file_reflection_data[] = {
+              $file_reflection_data$[] = {
                   $reflection_data$,
           };
           }  // namespace
