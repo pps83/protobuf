@@ -3880,6 +3880,7 @@ void MessageGenerator::GenerateInternalGenerateClassData(io::Printer* p) {
             {"is_initialized", is_initialized},
             {"custom_vtable_methods", custom_vtable_methods},
             {"index_in_file_messages", index_in_file_messages_},
+            {"file_reflection_data", UniqueName("file_reflection_data", descriptor_->file(), options_)},
             {"tracker_on_get_metadata",
              [&] {
                if (HasTracker(descriptor_, options_)) {
@@ -3916,7 +3917,7 @@ void MessageGenerator::GenerateInternalGenerateClassData(io::Printer* p) {
                     false,
                 },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-                &file_reflection_data[$index_in_file_messages$],
+                &$file_reflection_data$[$index_in_file_messages$],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
                 &::_pbi::kDescriptorMethods,
                 &$desc_table$,
