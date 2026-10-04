@@ -5718,6 +5718,35 @@ void MessageGenerator::GenerateSourceDefaultInstance(io::Printer* p) {
                )cc");
              }
            }},
+          // Without constant initialization, Init() alone constructs a file descriptor proto's default instance.
+          {"default_init",
+           [&] {
+             if (!is_file_descriptor_proto) {
+               p->Emit(R"cc(
+                 : _default(::_pbi::ConstantInitialized{}, $Msg$_class_data_.base())
+               )cc");
+             } else {
+               p->Emit(R"cc(
+#if defined(PROTOBUF_CONSTINIT_DEFAULT_INSTANCES)
+                 : _default(::_pbi::ConstantInitialized{}, $Msg$_class_data_.base())
+#endif  // PROTOBUF_CONSTINIT_DEFAULT_INSTANCES
+               )cc");
+             }
+           }},
+          {"default_member_init",
+           [&] {
+             if (!is_file_descriptor_proto) {
+               p->Emit(R"cc(
+                 _default(::_pbi::ConstantInitialized{}, GetClassData()),
+               )cc");
+             } else {
+               p->Emit(R"cc(
+#if defined(PROTOBUF_CONSTINIT_DEFAULT_INSTANCES)
+                 _default(::_pbi::ConstantInitialized{}, GetClassData()),
+#endif  // PROTOBUF_CONSTINIT_DEFAULT_INSTANCES
+               )cc");
+             }
+           }},
           {"file_descriptor_proto_init",
            [&] {
              if (!is_file_descriptor_proto) return;
@@ -5768,14 +5797,12 @@ void MessageGenerator::GenerateSourceDefaultInstance(io::Printer* p) {
       R"cc(
         struct $globals_type$ : ::_pbi::MessageGlobalsBase {
           $constexpr$ $globals_type$()
-              :
 #ifndef PROTOBUF_MESSAGE_GLOBALS
-                _default(::_pbi::ConstantInitialized{},
-                         $Msg$_class_data_.base())
+              $default_init$
 #else   // !PROTOBUF_MESSAGE_GLOBALS
-                MessageGlobalsBase($Msg$::InternalGenerateClassData_(
+              : MessageGlobalsBase($Msg$::InternalGenerateClassData_(
                     _default, &$globals$._table.header)),
-                _default(::_pbi::ConstantInitialized{}, GetClassData()),
+                $default_member_init$
                 _table(::_pbi::PrivateAccess::GenerateParseTable<$Msg$>(
                     GetClassData()))
 #endif  // PROTOBUF_MESSAGE_GLOBALS
