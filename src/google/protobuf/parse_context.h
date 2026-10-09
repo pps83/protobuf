@@ -137,7 +137,9 @@ class PROTOBUF_EXPORT EpsCopyInputStream {
   //    __asan_address_is_poisoned is allowed to have false negatives.
   class PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED LimitToken {
    public:
-    LimitToken() { internal::PoisonMemoryRegion(&token_, sizeof(token_)); }
+    LimitToken() : token_(0) {
+      internal::PoisonMemoryRegion(&token_, sizeof(token_));
+    }
 
     explicit LimitToken(int token) : token_(token) {
       internal::UnpoisonMemoryRegion(&token_, sizeof(token_));
