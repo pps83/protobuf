@@ -257,12 +257,7 @@ class SooRep {
   uint32_t size_ = 0;
   union {
     char soo_data_[kSooCapacityBytes];
-    HeapRep* heap_rep_;
-
-    // NOTE: in some language versions, we can't have a constexpr constructor
-    // if we don't initialize all fields, but we don't need to initialize this
-    // field, so initialize an empty dummy variable instead.
-    std::true_type dummy_ = {};
+    HeapRep* heap_rep_ = nullptr;
   };
 };
 
